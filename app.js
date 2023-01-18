@@ -13,7 +13,7 @@
 // const newWidth = width - 4;
 // const newHeight = height + 4;
 // const division = newWidth / newHeight;
-// const volume = 2 ** 3; CH// 2 * 2 * 2
+// const volume = 2 ** 3; // 2 * 2 * 2
 // console.log(volume);
 
 // Строки
@@ -30,9 +30,9 @@
 // console.log(age);
 
 // Операторы сравнения
-// // const current Age = 20;
-// // console.log(current Age > age);
-// // console.log(current Age >= age);
-// // console.log(current Age < age);
-// // console.log(current Age <= age);
-// // console.log(current Age == age);
+// // const currentAge = 20;
+// // console.log(currentAge > age);
+// // console.log(currentAge >= age);
+// // console.log(currentAge < age);
+// // console.log(currentAge <= age);
+// // console.log(currentAge == age);
