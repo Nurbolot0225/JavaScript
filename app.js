@@ -88,16 +88,41 @@
 // console.log(template4)
 
 // Преобразование типов
-const age = '20';
-console.log(Number(age) + 1);
-console.log(age * 3);
-const userName = 'Вася';
-console.log(Number(userName) + 5);
-console.log(typeof NaN);
-console.log(String(4) + 7);
-console.log(Boolean('') + 10);
-console.log(true + 2);
+// const age = '20';
+// console.log(Number(age) + 1);
+// console.log(age * 3);
+// const userName = 'Вася';
+// console.log(Number(userName) + 5);
+// console.log(typeof NaN);
+// console.log(String(4) + 7);
+// console.log(Boolean('') + 10);
+// console.log(true + 2);
 
-const a = 2 + '10';
-console.log(a - 10);
+// const a = 2 + '10';
+// console.log(a - 10);
 
+// if else
+const money = 100;
+if (money > 50) {
+    console.log('Может купить наш продукт');
+} else if (money > 55) {
+    console.log('Куплен мини продукт');
+}
+else {
+    console.log('Не хватает баланса');
+}
+
+// Логическое операторы
+// const isAdmin = true;
+// const isWrite = true;
+//
+// console.log(`Системный файл ${isAdmin && isWrite}`);
+// console.log(`Обычный файл ${isAdmin || isWrite}`);
+// console.log(`Инвертируем права админа ${!isAdmin}`);
+//
+// const isEdited = true;
+// const isSuperAdmin = true;
+//
+// console.log(`Системный файл с редактированием ${
+//     isAdmin && isWrite && (!isEdited || isSuperAdmin)
+// }`);
