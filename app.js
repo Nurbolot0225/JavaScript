@@ -102,14 +102,43 @@
 // console.log(a - 10);
 
 // if else
-const money = 100;
-if (money > 50) {
-    console.log('Может купить наш продукт');
-} else if (money > 55) {
-    console.log('Куплен мини продукт');
-}
-else {
-    console.log('Не хватает баланса');
+// const money = 100;
+// if (money > 50) {
+//     console.log('Может купить наш продукт');
+// } else if (money > 55) {
+//     console.log('Куплен мини продукт');
+// }
+// else {
+//     console.log('Не хватает баланса');
+// }
+
+// const deposit = 12000;
+// const rate = 0.07;
+// const depositLength = 24;
+// const houseCost = 13500;
+//
+// const res = deposit * (1 + rate / 12) ** 24;
+// if (res > houseCost) {
+//     console.log(`Мы накопили: ${res}. Может купить. Остаток ${res - houseCost}`);
+// } else {
+//     console.log(`Мы накопили: ${res}. Купит не сможем :(`);
+// }
+
+// switch
+const role = 'manager';
+
+switch (role) {
+    case 'manager': // role === manager
+        console.log('manager');
+        break;
+    case 'admin': // role === admin
+        console.log('admin');
+        break;
+    case 'ceo': // role === ceo
+        console.log('ceo');
+        break;
+    default:
+        console.log('Мы тебя не знаем');
 }
 
 // Логическое операторы
