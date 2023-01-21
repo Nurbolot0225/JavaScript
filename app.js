@@ -125,21 +125,26 @@
 // }
 
 // switch
-const role = 'manager';
+// const role = 'manager';
+// switch (role) {
+//     case 'manager': // role === manager
+//         console.log('manager');
+//         break;
+//     case 'admin': // role === admin
+//         console.log('admin');
+//         break;
+//     case 'ceo': // role === ceo
+//         console.log('ceo');
+//         break;
+//     default:
+//         console.log('Мы тебя не знаем');
+// }
 
-switch (role) {
-    case 'manager': // role === manager
-        console.log('manager');
-        break;
-    case 'admin': // role === admin
-        console.log('admin');
-        break;
-    case 'ceo': // role === ceo
-        console.log('ceo');
-        break;
-    default:
-        console.log('Мы тебя не знаем');
-}
+const bmwX3Price = 100000;
+const fordFocusPrice = 100000;
+const budget = 20000;
+const res = budget > bmwX3Price ? 'bmw' : budget > fordFocusPrice ? 'ford' : 'Велосипед';
+console.log(`Я хочу купит ${res}`)
 
 // Логическое операторы
 // const isAdmin = true;
