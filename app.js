@@ -5,7 +5,7 @@
 // a = 'test';
 // console.log(a);
 
-// // Базовые арифметические операторы
+// Базовые арифметические операторы
 
 // const width = 10;
 // const height = 5;
@@ -30,9 +30,22 @@
 // console.log(age);
 
 // Операторы сравнения
-// // const currentAge = 20;
-// // console.log(currentAge > age);
-// // console.log(currentAge >= age);
-// // console.log(currentAge < age);
-// // console.log(currentAge <= age);
-// // console.log(currentAge == age);
+// const currentAge = 20;
+// console.log(currentAge > age);
+// console.log(currentAge >= age);
+// console.log(currentAge < age);
+// console.log(currentAge <= age);
+// console.log(currentAge == age);
+
+// Порядок операторов
+// const isSuited = 100 - 10 > 90 - 5;
+// console.log(isSuited);
+//
+// const a = (6 + 10) / 2;
+// console.log(a);
+//
+// let b;
+// let c;
+// c = b = 100 + 50;
+// console.log(c);
+// console.log(b);
