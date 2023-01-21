@@ -140,23 +140,23 @@
 //         console.log('Мы тебя не знаем');
 // }
 
-const bmwX3Price = 100000;
-const fordFocusPrice = 100000;
-const budget = 20000;
-const res = budget > bmwX3Price ? 'bmw' : budget > fordFocusPrice ? 'ford' : 'Велосипед';
-console.log(`Я хочу купит ${res}`)
+// const bmwX3Price = 100000;
+// const fordFocusPrice = 100000;
+// const budget = 20000;
+// const res = budget > bmwX3Price ? 'bmw' : budget > fordFocusPrice ? 'ford' : 'Велосипед';
+// console.log(`Я хочу купит ${res}`);
 
 // Логическое операторы
-// const isAdmin = true;
-// const isWrite = true;
-//
-// console.log(`Системный файл ${isAdmin && isWrite}`);
-// console.log(`Обычный файл ${isAdmin || isWrite}`);
-// console.log(`Инвертируем права админа ${!isAdmin}`);
-//
-// const isEdited = true;
-// const isSuperAdmin = true;
-//
-// console.log(`Системный файл с редактированием ${
-//     isAdmin && isWrite && (!isEdited || isSuperAdmin)
-// }`);
+const isAdmin = true;
+const isWrite = true;
+
+console.log(`Системный файл ${isAdmin && isWrite}`);
+console.log(`Обычный файл ${isAdmin || isWrite}`);
+console.log(`Инвертируем права админа ${!isAdmin}`);
+
+const isEdited = true;
+const isSuperAdmin = true;
+
+console.log(`Системный файл с редактированием ${
+    isAdmin && isWrite && (!isEdited || isSuperAdmin)
+}`);
