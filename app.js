@@ -247,18 +247,29 @@
 //
 // console.log(getExchangePrice(1,2,10));
 
-function computeCredit(age, hasJob = false) {
-    switch (true) {
-        case age > 24 && hasJob:
-            return 500;
-        case age > 24:
-            return 1000;
-        default:
-            return 0;
-    }
-}
-function canBuy(productPrice, age, money, hasJob = false) {
-    const creditMoney = computeCredit(age, hasJob);
-    return productPrice <= money + creditMoney;
-}
-console.log(canBuy(2000, 25, 1500, true));
+// function computeCredit(age, hasJob = false) {
+//     switch (true) {
+//         case age > 24 && hasJob:
+//             return 500;
+//         case age > 24:
+//             return 1000;
+//         default:
+//             return 0;
+//     }
+// }
+// function canBuy(productPrice, age, money, hasJob = false) {
+//     const creditMoney = computeCredit(age, hasJob);
+//     return productPrice <= money + creditMoney;
+// }
+// console.log(canBuy(2000, 25, 1500, true));
+
+// Массив
+const arr = ['Адилет', 'Нурсултан', 'Данияр'];
+arr.push('Нурболот'); // Добавление новый элемент конец массива
+console.log(arr);
+arr.unshift('Никита'); // Добавление новый элемент начало массива
+console.log(arr);
+arr.pop(); // Удаление последний элемент
+console.log(arr);
+arr.shift(); // Удаление первый элемент
+console.log(arr);
