@@ -147,16 +147,42 @@
 // console.log(`Я хочу купит ${res}`);
 
 // Логическое операторы
-const isAdmin = true;
-const isWrite = true;
+// const isAdmin = true;
+// const isWrite = true;
+//
+// console.log(`Системный файл ${isAdmin && isWrite}`);
+// console.log(`Обычный файл ${isAdmin || isWrite}`);
+// console.log(`Инвертируем права админа ${!isAdmin}`);
+//
+// const isEdited = true;
+// const isSuperAdmin = true;
+//
+// console.log(`Системный файл с редактированием ${
+//     isAdmin && isWrite && (!isEdited || isSuperAdmin)
+// }`);
 
-console.log(`Системный файл ${isAdmin && isWrite}`);
-console.log(`Обычный файл ${isAdmin || isWrite}`);
-console.log(`Инвертируем права админа ${!isAdmin}`);
+// const balance = 1000;
+// const bonusBalance = 900;
+// const isBaned = false;
+// const isExist = false;
+// const isSelling = true;
+//
+// const canBay = (balance > 1000 || bonusBalance > 100)
+//     && !isBaned
+//     && !isExist
+//     && isSelling
+// console.log(`Могу купить игру: ${canBay ? 'Да' : 'Нет'}`);
 
-const isEdited = true;
-const isSuperAdmin = true;
+// Введение в функции
+function logName(name, surname) {
+    console.log(`Моё имя: ${name} ${surname}`);
+}
+logName('Нурболот', 'Берибеков');
 
-console.log(`Системный файл с редактированием ${
-    isAdmin && isWrite && (!isEdited || isSuperAdmin)
-}`);
+function countDepositSum(depositInUSD, month, rate) {
+    return depositInUSD * (1 + rate / 12) ** month;
+}
+const exemple1 = countDepositSum(1000, 24, 0.12);
+console.log(exemple1);
+
+console.log(countDepositSum(1000, 48, 0.10));
