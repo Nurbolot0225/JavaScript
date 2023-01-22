@@ -187,14 +187,22 @@
 //
 // console.log(countDepositSum(1000, 48, 0.10));
 
+// // Анонимные функции
+// function powerOfTwo(num) {
+//     return num ** 2
+// }
+// console.log(powerOfTwo(5));
 //
+// const pofTo = function (num) {
+//     return num ** 2
+// }
+// console.log(pofTo(6));
+
+// Стрелочные функции
 function powerOfTwo(num) {
-    return num ** 2
+    return num  ** 2
 }
 console.log(powerOfTwo(5));
 
-const pofTo = function (num) {
-    return num ** 2
-}
+const pofTo = num => num ** 2;
 console.log(pofTo(6));
-
