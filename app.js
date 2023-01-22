@@ -174,15 +174,27 @@
 // console.log(`Могу купить игру: ${canBay ? 'Да' : 'Нет'}`);
 
 // Введение в функции
-function logName(name, surname) {
-    console.log(`Моё имя: ${name} ${surname}`);
-}
-logName('Нурболот', 'Берибеков');
+// function logName(name, surname) {
+//     console.log(`Моё имя: ${name} ${surname}`);
+// }
+// logName('Нурболот', 'Берибеков');
+//
+// function countDepositSum(depositInUSD, month, rate) {
+//     return depositInUSD * (1 + rate / 12) ** month;
+// }
+// const exemple1 = countDepositSum(1000, 24, 0.12);
+// console.log(exemple1);
+//
+// console.log(countDepositSum(1000, 48, 0.10));
 
-function countDepositSum(depositInUSD, month, rate) {
-    return depositInUSD * (1 + rate / 12) ** month;
+//
+function powerOfTwo(num) {
+    return num ** 2
 }
-const exemple1 = countDepositSum(1000, 24, 0.12);
-console.log(exemple1);
+console.log(powerOfTwo(5));
 
-console.log(countDepositSum(1000, 48, 0.10));
+const pofTo = function (num) {
+    return num ** 2
+}
+console.log(pofTo(6));
+
