@@ -306,9 +306,40 @@
 // console.log(res5);
 // console.log(res5.length);
 
-const roles =  ['user', 'developer', 'sysadmin'];
+// const roles =  ['user', 'developer', 'sysadmin'];
+// const url = 'auth/user/login';
+// console.log(url.split('/'));
+// console.log(roles.join('-'));
 
-const url = 'auth/user/login';
-console.log(url.split('/'));
+const tasks = ['Задача 1'];
 
-console.log(roles.join('-'));
+function addTask(task) {
+    tasks.push(task);
+}
+
+function removeTask(task) {
+    const index = tasks.indexOf(task);
+    if (index === -1) {
+        return
+    }
+    tasks.splice(index, 1);
+}
+
+function prioritize(task) {
+    const index = tasks.indexOf(task);
+    if (index === -1) {
+        return
+    }
+    const oldTask = tasks[index];
+    tasks.splice(index, 1);
+    tasks.unshift(oldTask);
+}
+
+addTask('Задача 3');
+addTask('Задача 4');
+addTask('Задача 5');
+console.log(tasks);
+removeTask('Задача 6');
+console.log(tasks);
+prioritize('Задача 4');
+console.log(tasks);
