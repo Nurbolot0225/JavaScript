@@ -264,12 +264,25 @@
 // console.log(canBuy(2000, 25, 1500, true));
 
 // Массив
-const arr = ['Адилет', 'Нурсултан', 'Данияр'];
-arr.push('Нурболот'); // Добавление новый элемент конец массива
-console.log(arr);
-arr.unshift('Никита'); // Добавление новый элемент начало массива
-console.log(arr);
-arr.pop(); // Удаление последний элемент
-console.log(arr);
-arr.shift(); // Удаление первый элемент
-console.log(arr);
+// const arr = ['Адилет', 'Нурсултан', 'Данияр'];
+// arr.push('Нурболот'); // Добавление новый элемент конец массива
+// console.log(arr);
+// arr.unshift('Никита'); // Добавление новый элемент начало массива
+// console.log(arr);
+// arr.pop(); // Удаление последний элемент
+// console.log(arr);
+// arr.shift(); // Удаление первый элемент
+// console.log(arr);
+
+// Поиск элемента
+// const role = ['user', 'admin', 'manager'];
+// const element = role.indexOf('admin');
+// console.log(element);
+// if (role.indexOf('admin')) {
+//     console.log('Доступ есть');
+// }
+// const  element2 = role.includes('admin');
+// console.log(element2);
+// if (role.includes('admin')) {
+//     console.log('Доступ есть');
+// }
