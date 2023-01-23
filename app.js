@@ -281,12 +281,11 @@
 // if (role.indexOf('admin')) {
 //     console.log('Доступ есть');
 // }
-// const  element2 = role.includes('admin');
+// const element2 = role.includes('admin');
 // console.log(element2);
 // if (role.includes('admin')) {
 //     console.log('Доступ есть');
 // }
-
 
 // const roles = ['user', 'admin', 'superAdmin', 'manager'];
 // const res = roles.slice(2);
@@ -297,12 +296,19 @@
 // console.log(res2);
 //
 // const res3 = roles.splice(2, 4);
-// // console.log(res 3);
+// console.log(res 3);
 //
 // const res4 = roles.reverse();
 // console.log(res4);
 //
-// // const new Roles = ['sysadmin', 'developer'];
-// // const res5 = new Roles.concat(roles);
-// // console.log(res 5);
-// // console.log(res 5.length);
+// const newRoles = ['sysadmin', 'developer'];
+// const res5 = newRoles.concat(roles);
+// console.log(res5);
+// console.log(res5.length);
+
+const roles =  ['user', 'developer', 'sysadmin'];
+
+const url = 'auth/user/login';
+console.log(url.split('/'));
+
+console.log(roles.join('-'));
