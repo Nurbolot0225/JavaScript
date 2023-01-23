@@ -322,24 +322,22 @@ function removeTask(task) {
     if (index === -1) {
         return
     }
-    tasks.splice(index, 1);
+    return tasks.splice(index, 1);
 }
 
 function prioritize(task) {
-    const index = tasks.indexOf(task);
-    if (index === -1) {
+    const result = removeTask(task);
+    if(!result) {
         return
     }
-    const oldTask = tasks[index];
-    tasks.splice(index, 1);
-    tasks.unshift(oldTask);
+    tasks.unshift(result[0]);
 }
 
+addTask('Задача 2');
 addTask('Задача 3');
 addTask('Задача 4');
-addTask('Задача 5');
 console.log(tasks);
-removeTask('Задача 6');
+removeTask('Задача 3');
 console.log(tasks);
-prioritize('Задача 4');
+prioritize('Задача 5');
 console.log(tasks);
