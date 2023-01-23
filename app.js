@@ -286,3 +286,23 @@
 // if (role.includes('admin')) {
 //     console.log('Доступ есть');
 // }
+
+
+// const roles = ['user', 'admin', 'superAdmin', 'manager'];
+// const res = roles.slice(2);
+// console.log(res);
+// console.log(roles);
+//
+// const res2 = roles.slice(-1);
+// console.log(res2);
+//
+// const res3 = roles.splice(2, 4);
+// // console.log(res 3);
+//
+// const res4 = roles.reverse();
+// console.log(res4);
+//
+// // const new Roles = ['sysadmin', 'developer'];
+// // const res5 = new Roles.concat(roles);
+// // console.log(res 5);
+// // console.log(res 5.length);
