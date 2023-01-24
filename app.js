@@ -343,9 +343,14 @@
 // console.log(tasks);
 
 // Деструктуризация массива
-const [userData, userAge, userCity]  = ['Nurbolot', 20, 'Bishkek'];
-console.log(userData);
-console.log(userAge);
-console.log(userCity);
-const [hello, _, name] = ['Hello', 'World', 'Nurbolot'];
-console.log(hello, name);
+// const [userData, userAge, userCity]  = ['Nurbolot', 20, 'Bishkek'];
+// console.log(userData);
+// console.log(userAge);
+// console.log(userCity);
+// const [hello, _, name] = ['Hello', 'World', 'Nurbolot'];
+// console.log(hello, name);
+
+// Rest оператор
+const data = [1, 2, 3, 4, 5, 6, 7, 8];
+const [one,two, ...el] = data;
+console.log(one, two, el);
