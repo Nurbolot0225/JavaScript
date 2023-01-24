@@ -369,6 +369,22 @@
 // getUrlParts(url);
 
 ///////////////////// Цикл for ///////////////////////////////////////
-for (let i = 1; i <= 10; i++) {
-    console.log(`Наш баланс ${i}$`);
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`Наш баланс ${i}$`);
+// }
+
+const tasks = ['Задача 1', 'Задача 2', 'Задача 3', 'Задача 4', 'Задача 5', 'Задача 6'];
+
+for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i] === 'Задача 2') {
+        continue;
+    }
+    console.log(tasks[i]);
+}
+console.log('-----');
+for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i] === 'Задача 4') {
+        break
+    }
+    console.log(tasks[i]);
 }
