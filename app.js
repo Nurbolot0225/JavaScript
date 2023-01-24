@@ -311,33 +311,41 @@
 // console.log(url.split('/'));
 // console.log(roles.join('-'));
 
-const tasks = ['Задача 1'];
+// const tasks = ['Задача 1'];
+//
+// function addTask(task) {
+//     tasks.push(task);
+// }
+//
+// function removeTask(task) {
+//     const index = tasks.indexOf(task);
+//     if (index === -1) {
+//         return
+//     }
+//     return tasks.splice(index, 1);
+// }
+//
+// function prioritize(task) {
+//     const result = removeTask(task);
+//     if(!result) {
+//         return
+//     }
+//     tasks.unshift(result[0]);
+// }
+//
+// addTask('Задача 2');
+// addTask('Задача 3');
+// addTask('Задача 4');
+// console.log(tasks);
+// removeTask('Задача 3');
+// console.log(tasks);
+// prioritize('Задача 5');
+// console.log(tasks);
 
-function addTask(task) {
-    tasks.push(task);
-}
-
-function removeTask(task) {
-    const index = tasks.indexOf(task);
-    if (index === -1) {
-        return
-    }
-    return tasks.splice(index, 1);
-}
-
-function prioritize(task) {
-    const result = removeTask(task);
-    if(!result) {
-        return
-    }
-    tasks.unshift(result[0]);
-}
-
-addTask('Задача 2');
-addTask('Задача 3');
-addTask('Задача 4');
-console.log(tasks);
-removeTask('Задача 3');
-console.log(tasks);
-prioritize('Задача 5');
-console.log(tasks);
+// Деструктуризация массива
+const [userData, userAge, userCity]  = ['Nurbolot', 20, 'Bishkek'];
+console.log(userData);
+console.log(userAge);
+console.log(userCity);
+const [hello, _, name] = ['Hello', 'World', 'Nurbolot'];
+console.log(hello, name);
