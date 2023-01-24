@@ -1,11 +1,11 @@
-// Переменный
+/////////////////////////// Переменный //////////////////////////////
 
 // let a = 1;
 // console.log(a);
 // a = 'test';
 // console.log(a);
 
-// Базовые арифметические операторы
+///////////////////////// Базовые арифметические операторы ///////////////////////////////
 
 // const width = 10;
 // const height = 5;
@@ -16,12 +16,12 @@
 // const volume = 2 ** 3; // 2 * 2 * 2
 // console.log(volume);
 
-// Строки
+////////////////////////////////// Строки ///////////////////////////////////////////////
 // const city = 'Москва';
 // const street = 'Новослободская';
 // console.log(city + ', ' + street);
 
-// Операторы присваивания
+///////////////////////// Операторы присваивания //////////////////////////////
 // let age = 20 + 1;
 // age += 2; // age = age + 2
 // age -= 2; // age = age + 2
@@ -29,7 +29,7 @@
 // age /= 2; // age = age + 2
 // console.log(age);
 
-// Операторы сравнения
+///////////////////////// Операторы сравнения //////////////////////////////
 // const currentAge = 20;
 // console.log(currentAge > age);
 // console.log(currentAge >= age);
@@ -37,7 +37,7 @@
 // console.log(currentAge <= age);
 // console.log(currentAge == age);
 
-// Порядок операторов
+///////////////////////// Порядок операторов //////////////////////////////
 // const isSuited = 100 - 10 > 90 - 5;
 // console.log(isSuited);
 //
@@ -50,7 +50,7 @@
 // console.log(c);
 // console.log(b);
 
-// Типы данных
+//////////// Типы данных ///////////////////////////
 // let a = 5;
 // let b = 5.6;
 // console.log(typeof a);
@@ -69,7 +69,7 @@
 // let d = null;
 // console.log(typeof (d == null));
 
-// Шаблонные строки
+//////////// Шаблонные строки ///////////////////////////
 // const projectName = 'Сайт магазина';
 // const price = 2000;
 // const author = 'Василий';
@@ -87,7 +87,7 @@
 // Цена ${price}`;
 // console.log(template4)
 
-// Преобразование типов
+/////////////////// Преобразование типов ///////////////////////////////
 // const age = '20';
 // console.log(Number(age) + 1);
 // console.log(age * 3);
@@ -146,7 +146,7 @@
 // const res = budget > bmwX3Price ? 'bmw' : budget > fordFocusPrice ? 'ford' : 'Велосипед';
 // console.log(`Я хочу купит ${res}`);
 
-// Логическое операторы
+/////////////////////////// Логическое операторы ////////////////////////////
 // const isAdmin = true;
 // const isWrite = true;
 //
@@ -187,7 +187,7 @@
 //
 // console.log(countDepositSum(1000, 48, 0.10));
 
-// // Анонимные функции
+/////////////// Анонимные функции ////////////////////
 // function powerOfTwo(num) {
 //     return num ** 2
 // }
@@ -198,7 +198,7 @@
 // }
 // console.log(pofTo(6));
 
-// Стрелочные функции
+//////////////////////// Стрелочные функции /////////////////////
 // function powerOfTwo(num) {
 //     return num  ** 2
 // }
@@ -263,7 +263,7 @@
 // }
 // console.log(canBuy(2000, 25, 1500, true));
 
-// Массив
+/////////////////////////// Массив /////////////////////////
 // const arr = ['Адилет', 'Нурсултан', 'Данияр'];
 // arr.push('Нурболот'); // Добавление новый элемент конец массива
 // console.log(arr);
@@ -274,7 +274,7 @@
 // arr.shift(); // Удаление первый элемент
 // console.log(arr);
 
-// Поиск элемента
+////////////////////////// Поиск элемента /////////////////////////
 // const role = ['user', 'admin', 'manager'];
 // const element = role.indexOf('admin');
 // console.log(element);
@@ -342,7 +342,7 @@
 // prioritize('Задача 5');
 // console.log(tasks);
 
-// Деструктуризация массива
+///////////////////////// Деструктуризация массива ////////////////////////
 // const [userData, userAge, userCity]  = ['Nurbolot', 20, 'Bishkek'];
 // console.log(userData);
 // console.log(userAge);
@@ -350,20 +350,25 @@
 // const [hello, _, name] = ['Hello', 'World', 'Nurbolot'];
 // console.log(hello, name);
 
-// Rest оператор
+////////////////////// Rest оператор ////////////////////////
 // const data = [1, 2, 3, 4, 5, 6, 7, 8];
 // const [one,two, ...el] = data;
 // console.log(one, two, el);
 
-const url = 'https://purpleschool.ru/course/javascript';
-function getUrlParts(url) {
-    const [protocol, _, host, ...path] = url.split('/');
-    if (protocol === 'https:' || protocol === 'http:') {
-        console.log(protocol, _, host, path);
-        console.log(`Протокол: ${protocol.split(':')[0]}`);
-        console.log(`Доменная имя: ${host}`);
-        console.log(`Путь внутри сайта: /${path.join('/')}`);
-    }
-}
+// const url = 'https://purpleschool.ru/course/javascript';
+// function getUrlParts(url) {
+//     const [protocol, _, host, ...path] = url.split('/');
+//     if (protocol === 'https:' || protocol === 'http:') {
+//         console.log(protocol, _, host, path);
+//         console.log(`Протокол: ${protocol.split(':')[0]}`);
+//         console.log(`Доменная имя: ${host}`);
+//         console.log(`Путь внутри сайта: /${path.join('/')}`);
+//     }
+// }
+//
+// getUrlParts(url);
 
-getUrlParts(url);
+///////////////////// Цикл for ///////////////////////////////////////
+for (let i = 1; i <= 10; i++) {
+    console.log(`Наш баланс ${i}$`);
+}
