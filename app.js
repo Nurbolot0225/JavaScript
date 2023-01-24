@@ -351,6 +351,19 @@
 // console.log(hello, name);
 
 // Rest оператор
-const data = [1, 2, 3, 4, 5, 6, 7, 8];
-const [one,two, ...el] = data;
-console.log(one, two, el);
+// const data = [1, 2, 3, 4, 5, 6, 7, 8];
+// const [one,two, ...el] = data;
+// console.log(one, two, el);
+
+const url = 'https://purpleschool.ru/course/javascript';
+function getUrlParts(url) {
+    const [protocol, _, host, ...path] = url.split('/');
+    if (protocol === 'https:' || protocol === 'http:') {
+        console.log(protocol, _, host, path);
+        console.log(`Протокол: ${protocol.split(':')[0]}`);
+        console.log(`Доменная имя: ${host}`);
+        console.log(`Путь внутри сайта: /${path.join('/')}`);
+    }
+}
+
+getUrlParts(url);
