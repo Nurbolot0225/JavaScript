@@ -373,18 +373,26 @@
 //     console.log(`Наш баланс ${i}$`);
 // }
 
-const tasks = ['Задача 1', 'Задача 2', 'Задача 3', 'Задача 4', 'Задача 5', 'Задача 6'];
+// const tasks = ['Задача 1', 'Задача 2', 'Задача 3', 'Задача 4', 'Задача 5', 'Задача 6'];
+//
+// for (let i = 0; i < tasks.length; i++) {
+//     if (tasks[i] === 'Задача 2') {
+//         continue;
+//     }
+//     console.log(tasks[i]);
+// }
+// console.log('-----');
+// for (let i = 0; i < tasks.length; i++) {
+//     if (tasks[i] === 'Задача 4') {
+//         break
+//     }
+//     console.log(tasks[i]);
+// }
 
-for (let i = 0; i < tasks.length; i++) {
-    if (tasks[i] === 'Задача 2') {
-        continue;
-    }
-    console.log(tasks[i]);
+const arr = ['!', 'JavaScript', 'люблю', 'Я'];
+const newArray = [];
+for (let i = arr.length - 1; i >= 0; i--) {
+    newArray.push(arr[i]);
 }
-console.log('-----');
-for (let i = 0; i < tasks.length; i++) {
-    if (tasks[i] === 'Задача 4') {
-        break
-    }
-    console.log(tasks[i]);
-}
+console.log(newArray.join(' '));
+console.log(arr.reverse().join(' '));
