@@ -389,10 +389,46 @@
 //     console.log(tasks[i]);
 // }
 
-const arr = ['!', 'JavaScript', 'люблю', 'Я'];
-const newArray = [];
-for (let i = arr.length - 1; i >= 0; i--) {
-    newArray.push(arr[i]);
+// const arr = ['!', 'JavaScript', 'люблю', 'Я'];
+// const newArray = [];
+// for (let i = arr.length - 1; i >= 0; i--) {
+//     newArray.push(arr[i]);
+// }
+// console.log(newArray.join(' '));
+// console.log(arr.reverse().join(' '));
+
+// for (let i = 1; i <= 5; i++) {
+//     console.log(`Цикл 1 ${i}`);
+//     for (let j = 1; j <= 3; j++) {
+//         console.log(`Цикл 2 ${j}`);
+//     }
+// }
+
+// const tasks = [[1, 'Задача 1'], [2, 'Задача 2']];
+//
+// for (let i = 0; i < tasks.length; i++) {
+//     for (let j = 0; j < tasks[i].length; j++) {
+//         console.log(tasks[i][j]);
+//     }
+// }
+
+const arr = [1, 4, 5, 6, 7, 8];
+
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > 5) {
+        break;
+    }
+    console.log(`Вывод for - ${i}`)
 }
-console.log(newArray.join(' '));
-console.log(arr.reverse().join(' '));
+
+let i = 1
+while (arr[i] <= 5 && i < arr.length) {
+    console.log(`Вывод while - ${i}`);
+    i++;
+}
+
+let j = 0;
+do {
+    console.log(j);
+    j++;
+} while (j < 3);
