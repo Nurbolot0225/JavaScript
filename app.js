@@ -411,24 +411,81 @@
 //         console.log(tasks[i][j]);
 //     }
 // }
+////////////////// Цикл while ////////////////////////
+// const arr = [1, 4, 5, 6, 7, 8];
+//
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > 5) {
+//         break;
+//     }
+//     console.log(`Вывод for - ${i}`)
+// }
+//
+// let i = 1
+// while (arr[i] <= 5 && i < arr.length) {
+//     console.log(`Вывод while - ${i}`);
+//     i++;
+// }
+//
+// let j = 0;
+// do {
+//     console.log(j);
+//     j++;
+// } while (j < 3);
 
-const arr = [1, 4, 5, 6, 7, 8];
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'string', true, {name: 'Name'}, undefined, null];
+//
+// //// итерация по значениям
+// for (const number of arr) {
+//     console.log(number);
+// }
+// //// итерация по индексам
+// for (const number in arr) {
+//     console.log(arr[number]);
+// }
 
-for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > 5) {
-        break;
+const operations = [1000, -700, 300, -500, 10000];
+const startingBalance = 100;
+
+function getBalance(arrayOfOperations, initialBalance) {
+    let balance = initialBalance;
+    for (const element of arrayOfOperations) {
+        balance += element;
     }
-    console.log(`Вывод for - ${i}`)
+    return balance;
+}
+console.log(getBalance(operations, startingBalance));
+
+function checkOperations(arrayOfOperations, initialBalance) {
+    let balance = initialBalance;
+    let isOk = true
+    for (const element of arrayOfOperations) {
+        balance += element;
+        if (balance < 0) {
+            isOk = false;
+            break;
+        }
+    }
+    return isOk;
 }
 
-let i = 1
-while (arr[i] <= 5 && i < arr.length) {
-    console.log(`Вывод while - ${i}`);
-    i++;
-}
+console.log(checkOperations(operations, startingBalance));
 
-let j = 0;
-do {
-    console.log(j);
-    j++;
-} while (j < 3);
+function averageOperations(arrayOfOperations) {
+    let positiveCount = 0;
+    let positiveSum = 0;
+    let negativeCount = 0;
+    let negativeSum = 0;
+    for (const element of arrayOfOperations) {
+        if (element > 0) {
+            positiveCount++;
+            positiveSum += element;
+        }
+        if (element < 0) {
+            negativeCount++;
+            negativeSum += element;
+        }
+    }
+    return [positiveSum / positiveCount, negativeSum / negativeCount];
+}
+console.log(averageOperations(operations));
