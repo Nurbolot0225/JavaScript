@@ -491,27 +491,42 @@
 // console.log(averageOperations(operations));
 
 ////////////// Функции высшего порядка Callback ////////////////////////
-function add(a, b) {
-    return a + b;
+// function add(a, b) {
+//     return a + b;
+// }
+//
+// function subtract(a, b) {
+//     return a - b;
+// }
+//
+// function power(a, b) {
+//     return a**b;
+// }
+//
+// function calculate(a, b, fn) {
+//     console.log(fn.name);
+//     const res = fn(a, b);
+//     return res;
+// }
+//
+// let res = calculate(3, 5, add);
+// console.log(res);
+// res = calculate(3, 5, subtract);
+// console.log(res);
+// res = calculate(3, 5, power);
+// console.log(res);
+
+////////////////// Возврат функции замыкания /////////////////////
+function power(pow) {
+    return function (num) {
+        return num**pow;
+    }
 }
 
-function subtract(a, b) {
-    return a - b;
-}
+const powerOfTwo = power(2);
+console.log(powerOfTwo(5));
 
-function power(a, b) {
-    return a**b;
-}
+const powerOfThree = power(3);
+console.log(powerOfThree(5));
 
-function calculate(a, b, fn) {
-    console.log(fn.name);
-    const res = fn(a, b);
-    return res;
-}
-
-let res = calculate(3, 5, add);
-console.log(res);
-res = calculate(3, 5, subtract);
-console.log(res);
-res = calculate(3, 5, power);
-console.log(res);
+console.log(power(5)(4));
