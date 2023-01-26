@@ -561,7 +561,9 @@
 // console.log(transactionInUSD);
 // console.log(transactionInRUB2);
 
-const operations = [100, -20, 7, -20, 50];
+/////////////////// fillter //////////////////////
+
+// const operations = [100, -20, 7, -20, 50];
 // const positiveOperations = [];
 // for (const operation of operations) {
 //     if (operation > 0) {
@@ -569,14 +571,21 @@ const operations = [100, -20, 7, -20, 50];
 //     }
 // }
 // console.log(positiveOperations);
-const positiveOperations = operations
-    .filter(operation => {
-        return operation > 0
-    });
-console.log(positiveOperations);
-const positiveRUBOperations = operations
-    .filter(operation => {
-        return operation > 0
-    })
-    .map(operation => operation * 86);
-console.log(positiveRUBOperations);
+// const positiveOperations = operations
+//     .filter(operation => {
+//         return operation > 0
+//     });
+// console.log(positiveOperations);
+// const positiveRUBOperations = operations
+//     .filter(operation => {
+//         return operation > 0
+//     })
+//     .map(operation => operation * 86);
+// console.log(positiveRUBOperations);
+
+const prices = [[100, 200], [120, 100], [200, 350]];
+
+const result = prices
+    .map(product => product[1] - product[0])
+    .filter(price => price > 0);
+console.log(result)
