@@ -545,18 +545,38 @@
 // });
 
 ///////////// map ///////////////////////
-const transactionInUSD = [10, -7, 50, -10, 100];
-const transactionInRUB = [];
-for (const transactionInUSDElement of transactionInUSD) {
-    transactionInRUB.push(transactionInUSDElement * 86);
-}
-console.log(transactionInUSD);
-console.log(transactionInRUB);
+// const transactionInUSD = [10, -7, 50, -10, 100];
+// const transactionInRUB = [];
+// for (const transactionInUSDElement of transactionInUSD) {
+//     transactionInRUB.push(transactionInUSDElement * 86);
+// }
+// console.log(transactionInUSD);
+// console.log(transactionInRUB);
+//
+// const transactionInRUB2 = transactionInUSD
+//     .map((transaction, i) => {
+//         console.log(i);
+//         return transaction * 86;
+//     });
+// console.log(transactionInUSD);
+// console.log(transactionInRUB2);
 
-const transactionInRUB2 = transactionInUSD
-    .map((transaction, i) => {
-        console.log(i);
-        return transaction * 86;
+const operations = [100, -20, 7, -20, 50];
+// const positiveOperations = [];
+// for (const operation of operations) {
+//     if (operation > 0) {
+//         positiveOperations.push(operation);
+//     }
+// }
+// console.log(positiveOperations);
+const positiveOperations = operations
+    .filter(operation => {
+        return operation > 0
     });
-console.log(transactionInUSD);
-console.log(transactionInRUB2);
+console.log(positiveOperations);
+const positiveRUBOperations = operations
+    .filter(operation => {
+        return operation > 0
+    })
+    .map(operation => operation * 86);
+console.log(positiveRUBOperations);
