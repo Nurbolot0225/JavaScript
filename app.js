@@ -535,11 +535,28 @@
 // console.log(power(2)(3));
 
 //////////// forEach ///////////////
-const score = [5, 10, 0, 15];
-for (const [i, el] of score.entries()) {
-    console.log(`Раунд: ${i + 1}: ${el}`);
-}
+// const score = [5, 10, 0, 15];
+// // for (const [i, el] of score.entries()) {
+// //     console.log(`Раунд: ${i + 1}: ${el}`);
+// // }
+//
+// score.forEach((el, i,) => {
+//     console.log(`Раунд: ${i + 1}: ${el}`);
+// });
 
-score.forEach((el, i) => {
-    console.log(`Раунд: ${i + 1}: ${el}`);
-});
+///////////// map ///////////////////////
+const transactionInUSD = [10, -7, 50, -10, 100];
+const transactionInRUB = [];
+for (const transactionInUSDElement of transactionInUSD) {
+    transactionInRUB.push(transactionInUSDElement * 86);
+}
+console.log(transactionInUSD);
+console.log(transactionInRUB);
+
+const transactionInRUB2 = transactionInUSD
+    .map((transaction, i) => {
+        console.log(i);
+        return transaction * 86;
+    });
+console.log(transactionInUSD);
+console.log(transactionInRUB2);
