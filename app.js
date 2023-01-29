@@ -623,17 +623,26 @@
 // }, 0);
 // console.log(average);
 
-const arr = [1, 4, 4, 10, 20];
+// const arr = [1, 4, 4, 10, 20];
+//
+// let elGT5;
+// for (const number of arr) {
+//     if (number > 5) {
+//         elGT5 = number;
+//         break;
+//     }
+// }
+//
+// elGT5 = arr.find(el => el > 5);
+// console.log(elGT5);
+// elGT5Index = arr.findIndex(el => el > 5);
+// console.log(elGT5Index);
 
-let elGT5;
-for (const number of arr) {
-    if (number > 5) {
-        elGT5 = number;
-        break;
-    }
+const arr = [2, 4, 4, 10, 20];
+function some(arr, element) {
+    const res = arr.find(el => el === element);
+    return res == undefined ? false : true;
 }
+console.log(some(arr, 2));
 
-elGT5 = arr.find(el => el > 5);
-console.log(elGT5);
-elGT5Index = arr.findIndex(el => el > 5);
-console.log(elGT5Index);
+console.log(arr.some(arr => arr === 3));
