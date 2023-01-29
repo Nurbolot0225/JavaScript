@@ -561,7 +561,7 @@
 // console.log(transactionInUSD);
 // console.log(transactionInRUB2);
 
-/////////////////// fillter //////////////////////
+/////////////////// filter //////////////////////
 
 // const operations = [100, -20, 7, -20, 50];
 // const positiveOperations = [];
@@ -583,9 +583,33 @@
 //     .map(operation => operation * 86);
 // console.log(positiveRUBOperations);
 
-const prices = [[100, 200], [120, 100], [200, 350]];
+// const prices = [[100, 200], [120, 100], [200, 350]];
+//
+// const result = prices
+//     .map(product => product[1] - product[0])
+//     .filter(price => price > 0);
+// console.log(result)
 
-const result = prices
-    .map(product => product[1] - product[0])
-    .filter(price => price > 0);
-console.log(result)
+//////////////////// reducer //////////////////////////
+
+const operations = [100, -20, 7, -30, 50];
+
+let balance = 0
+for (const operation of operations) {
+    balance += operation
+}
+
+const finalBalance = operations.reduce((acc, operation, i) => {
+   console.log(`Итерация ${i}, acc: ${acc}, operation ${operation}`);
+    return acc += operation;
+}, 0);
+console.log(finalBalance);
+
+const minElement = operations.reduce((acc, operation) => {
+    if (operation > acc) {
+        return acc;
+    } else {
+        return operation
+    }
+}, 0);
+console.log(minElement)
