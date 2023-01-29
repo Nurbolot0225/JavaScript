@@ -613,12 +613,27 @@
 // }, 0);
 // console.log(minElement);
 
-const arr = [2, 4, 4, 10];
-const average = arr.reduce((acc, element, index) => {
-    if (index != arr.length - 1) {
-        return acc + element;
-    } else {
-        return (acc + element) / arr.length;
+// const arr = [2, 4, 4, 10];
+// const average = arr.reduce((acc, element, index) => {
+//     if (index != arr.length - 1) {
+//         return acc + element;
+//     } else {
+//         return (acc + element) / arr.length;
+//     }
+// }, 0);
+// console.log(average);
+
+const arr = [1, 4, 4, 10, 20];
+
+let elGT5;
+for (const number of arr) {
+    if (number > 5) {
+        elGT5 = number;
+        break;
     }
-}, 0);
-console.log(average);
+}
+
+elGT5 = arr.find(el => el > 5);
+console.log(elGT5);
+elGT5Index = arr.findIndex(el => el > 5);
+console.log(elGT5Index);
