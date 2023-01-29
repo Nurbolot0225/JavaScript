@@ -638,11 +638,16 @@
 // elGT5Index = arr.findIndex(el => el > 5);
 // console.log(elGT5Index);
 
-const arr = [2, 4, 4, 10, 20];
-function some(arr, element) {
-    const res = arr.find(el => el === element);
-    return res == undefined ? false : true;
-}
-console.log(some(arr, 2));
+// const arr = [2, 4, 4, 10, 20];
+// function some(arr, element) {
+//     const res = arr.find(el => el === element);
+//     return res == undefined ? false : true;
+// }
+// console.log(some(arr, 2));
+//
+// console.log(arr.some(arr => arr === 3));
 
-console.log(arr.some(arr => arr === 3));
+const prices = [[2, 4], [3, 4], [10, [20, 50]]];
+const res = prices
+console.log(res.flat(2));
+console.log(res.flatMap(el => el.concat(1)));
