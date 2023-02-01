@@ -688,18 +688,26 @@
 // console.log(arr3);
 
 //////////////// Основные строковые методы ////////////////
-const userName = 'Вася Пупкина';
+// const userName = 'Вася Пупкина';
+// console.log(userName);
+// console.log(userName[0] + userName[1]);
+// console.log(userName[1]);
+// console.log(userName[3]);
+// console.log(userName.charAt(3));
+//
+// console.log(userName.length);
+// console.log(userName.indexOf('уп'));
+// console.log(userName.lastIndexOf('а'));
+// console.log(userName.includes('а'));
+// console.log(userName.includes('Васи'));
+//
+// console.log(userName.slice(5));
+// console.log(userName.slice(5, 8));
+
+const fullUserName = 'Вася aka Terminator Marvel Пупкин';
+
+const userName = fullUserName.slice(0, fullUserName.indexOf(' '));
 console.log(userName);
-console.log(userName[0] + userName[1]);
-console.log(userName[1]);
-console.log(userName[3]);
-console.log(userName.charAt(3));
-
-console.log(userName.length);
-console.log(userName.indexOf('уп'));
-console.log(userName.lastIndexOf('а'));
-console.log(userName.includes('а'));
-console.log(userName.includes('Васи'));
-
-console.log(userName.slice(5));
-console.log(userName.slice(5, 8));
+const userSurname = fullUserName.slice(fullUserName.lastIndexOf(' '), fullUserName.length + 1)
+console.log(userSurname);
+console.log(userName + userSurname);
