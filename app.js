@@ -713,17 +713,66 @@
 // console.log(userName + userSurname);
 
 /////////////////// Преобразование строки ////////////////////////
-const str = 'Nurbolot';
-console.log(str.includes('t'));
-console.log(str.startsWith('N'));
-console.log(str.endsWith('t'));
+// const str = 'Nurbolot';
+// console.log(str.includes('t'));
+// console.log(str.startsWith('N'));
+// console.log(str.endsWith('t'));
+//
+// console.log(str.toLowerCase());
+// console.log(str.toUpperCase());
+// console.log(str.replace('bolot', 'sultan'));
+// console.log(str.replaceAll('o', 'u'));
+//
+// const str2 = ' Нурболот Бердибеков  \nФамилия';
+// console.log(str2.trimStart())
+// console.log(str2.trim());
+// console.log(str2.trimEnd());
 
-console.log(str.toLowerCase());
-console.log(str.toUpperCase());
-console.log(str.replace('bolot', 'sultan'));
-console.log(str.replaceAll('o', 'u'));
+/* Проверить является ли это номером телефона России */
+/* верные */
+const num1 = '89103225356';
+const num2 = '+79103225356';
+const num3 = '+7(910)3235356';
+const num4 = '+7(910) 323-53-56';
+const num5 = ' +7(910) 323-53-56';
 
-const str2 = ' Нурболот Бердибеков  \nФамилия';
-console.log(str2.trimStart())
-console.log(str2.trim());
-console.log(str2.trimEnd());
+/* не верные */
+const num1Error = '89103235';
+const num2Error = '+7d910323-53-56';
+const num3Error = '9+7102235356';
+const num4Error = '89103g35356';
+
+function isPhoneNumber(num) {
+    num = num.trim();
+    num = num.replace('+7', '8');
+    if (!num.startsWith('8')) {
+        return false;
+    }
+    num = num.replaceAll('(', '');
+    num = num.replaceAll(')', '');
+    num = num.replaceAll(' ', '');
+    num = num.replaceAll('-', '');
+    if (num.length !== 11) {
+        return false;
+    }
+    let onlyNumber = true;
+    for (const char of num) {
+        if (isNaN(Number(char))) {
+            onlyNumber = false;
+            break;
+        }
+    }
+    return onlyNumber;
+}
+
+console.log(isPhoneNumber(num1));
+console.log(isPhoneNumber(num2));
+console.log(isPhoneNumber(num3));
+console.log(isPhoneNumber(num4));
+console.log(isPhoneNumber(num5));
+
+console.log(isPhoneNumber(num1Error));
+console.log(isPhoneNumber(num2Error));
+console.log(isPhoneNumber(num3Error));
+console.log(isPhoneNumber(num4Error));
+
