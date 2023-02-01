@@ -704,10 +704,26 @@
 // console.log(userName.slice(5));
 // console.log(userName.slice(5, 8));
 
-const fullUserName = 'Вася aka Terminator Marvel Пупкин';
+// const fullUserName = 'Вася aka Terminator Marvel Пупкин';
+//
+// const userName = fullUserName.slice(0, fullUserName.indexOf(' '));
+// console.log(userName);
+// const userSurname = fullUserName.slice(fullUserName.lastIndexOf(' '), fullUserName.length + 1)
+// console.log(userSurname);
+// console.log(userName + userSurname);
 
-const userName = fullUserName.slice(0, fullUserName.indexOf(' '));
-console.log(userName);
-const userSurname = fullUserName.slice(fullUserName.lastIndexOf(' '), fullUserName.length + 1)
-console.log(userSurname);
-console.log(userName + userSurname);
+/////////////////// Преобразование строки ////////////////////////
+const str = 'Nurbolot';
+console.log(str.includes('t'));
+console.log(str.startsWith('N'));
+console.log(str.endsWith('t'));
+
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+console.log(str.replace('bolot', 'sultan'));
+console.log(str.replaceAll('o', 'u'));
+
+const str2 = ' Нурболот Бердибеков  \nФамилия';
+console.log(str2.trimStart())
+console.log(str2.trim());
+console.log(str2.trimEnd());
