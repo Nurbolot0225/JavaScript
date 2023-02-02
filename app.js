@@ -779,10 +779,14 @@
 // const userFullName = 'Нурболот Бердибеков Бердибекович';
 // console.log(userFullName.split(' '));
 //
-// const [firstName, familyName, lastName] = userFullName.split(' ');
+// const [firstName, familyName, lastName] = userFullName.split(' ')
 // console.log(firstName);
 // console.log(familyName);
 // console.log(lastName);
 // const arr = ['Ты', 'знаешь', 'JS'];
 // console.log(arr.join(' '));
 
+const film = 'Звёздные Воины';
+console.log(film.padStart(50, ' *'));
+console.log(film.padEnd(50, ' +'));
+console.log(film.repeat(10));
