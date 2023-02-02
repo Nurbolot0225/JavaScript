@@ -786,7 +786,12 @@
 // const arr = ['Ты', 'знаешь', 'JS'];
 // console.log(arr.join(' '));
 
-const film = 'Звёздные Воины';
-console.log(film.padStart(50, ' *'));
-console.log(film.padEnd(50, ' +'));
-console.log(film.repeat(10));
+// const film = 'Звёздные Воины';
+// console.log(film.padStart(50, ' *'));
+// console.log(film.padEnd(50, ' +'));
+// console.log(film.repeat(10));
+
+/* Замаскировать всё, кроме последних 4x символов */
+const card = '2424515162627272';
+/*  ************7272 */
+console.log(card.slice(-4).padStart(16, '*'));
