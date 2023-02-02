@@ -835,11 +835,35 @@
 // user['age'] = 30;
 // console.log(user);
 
+// const users = [
+//     { name: 'Вася', age: 30 },
+//     { name: 'Катя', age: 18 },
+//     { name: 'Аня', age: 40 },
+//     { name: 'Петя', age: 25 }
+// ];
+//
+// console.log(users.sort((oneAge, twoAge) => oneAge.age - twoAge.age));
+
 const users = [
-    { name: 'Вася', age: 30 },
-    { name: 'Катя', age: 18 },
-    { name: 'Аня', age: 40 },
-    { name: 'Петя', age: 25 }
+    {
+      name: 'Вася',
+      surname: 'Пупкин',
+      age: 30,
+      skills: ['Разработка DevOps']
+    },
+    {
+        name: 'Катя',
+        surname: 'Белова',
+        age: 18,
+        skills: ['Дизайн']
+    }
 ];
 
-console.log(users.sort((oneAge, twoAge) => oneAge.age - twoAge.age))
+const userData = users.map(user => {
+    return {
+        fullName: `${user.name} ${user.surname}`,
+        skills: user.skills.length,
+        age: user.age
+    }
+})
+console.log(userData);
