@@ -809,28 +809,37 @@
 //     1: 1
 // };
 
-const user = {
-    name: 'Нурболот',
-    surname: 'Бердибеков',
-    age: 20,
-    skills: [
-        'Программирование',
-        'Готовка'
-    ],
-    eduBase: 'Школа 10',
-    eduPro: 'МФТИ'
-};
-console.log(user);
-console.log(user.skills[0]);
-const level = 'Pro';
-console.log(user['edu' + level]);
+// const user = {
+//     name: 'Нурболот',
+//     surname: 'Бердибеков',
+//     age: 20,
+//     skills: [
+//         'Программирование',
+//         'Готовка'
+//     ],
+//     eduBase: 'Школа 10',
+//     // eduPro: 'МФТИ'
+// };
+// console.log(user);
+// console.log(user.skills[0]);
+// const level = 'Pro';
+// console.log(user['edu' + level]);
+//
+// // const res = prompt('Введите свойство');
+// // console.log(user[res]);
+// console.log(user.city)
+// user['city'] = 'Москва';
+// console.log(user.city);
+//
+// user.age = 30;
+// user['age'] = 30;
+// console.log(user);
 
-// const res = prompt('Введите свойство');
-// console.log(user[res]);
-console.log(user.city)
-user['city'] = 'Москва';
-console.log(user.city);
+const users = [
+    { name: 'Вася', age: 30 },
+    { name: 'Катя', age: 18 },
+    { name: 'Аня', age: 40 },
+    { name: 'Петя', age: 25 }
+];
 
-user.age = 30;
-user['age'] = 30;
-console.log(user);
+console.log(users.sort((oneAge, twoAge) => oneAge.age - twoAge.age))
