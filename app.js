@@ -797,7 +797,18 @@
 // console.log(card.slice(-4).padStart(16, '*'));
 
 ///////////////////// Знакомство с объектами /////////////////////
-const userArray = ['Нурболот', ',Бердибеков', 20];
+// const userArray = ['Нурболот', ',Бердибеков', 20];
+// const user = {
+//     name: 'Нурболот',
+//     surname: 'Бердибеков',
+//     age: 20,
+//     skills: [
+//         'Программирование',
+//         'Готовка'
+//     ],
+//     1: 1
+// };
+
 const user = {
     name: 'Нурболот',
     surname: 'Бердибеков',
@@ -806,5 +817,20 @@ const user = {
         'Программирование',
         'Готовка'
     ],
-    1: 1
+    eduBase: 'Школа 10',
+    eduPro: 'МФТИ'
 };
+console.log(user);
+console.log(user.skills[0]);
+const level = 'Pro';
+console.log(user['edu' + level]);
+
+// const res = prompt('Введите свойство');
+// console.log(user[res]);
+console.log(user.city)
+user['city'] = 'Москва';
+console.log(user.city);
+
+user.age = 30;
+user['age'] = 30;
+console.log(user);
