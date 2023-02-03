@@ -879,38 +879,62 @@
 // }
 // console.log(user.getFullName());
 
-const wallet = {
-    balance: 0,
-    operations: [],
-    increase: function (sum, reason) {
-        this.balance += sum;
-        this.operations.push({
-            reason: reason,
-            sum: sum
-        })
-        return true;
+// const wallet = {
+//     balance: 0,
+//     operations: [],
+//     increase: function (sum, reason) {
+//         this.balance += sum;
+//         this.operations.push({
+//             reason,
+//             sum
+//         })
+//         return true;
+//     },
+//     decrease: function (sum, reason) {
+//         if (this.balance < sum) {
+//             console.log('Недостаточно баланса');
+//             return false;
+//         }
+//         this.balance -= sum;
+//         this.operations.push({
+//             reason: reason,
+//             sum: -sum
+//         })
+//         return true;
+//     },
+//     getOperationLength: function () {
+//         return this.operations.length;
+//     }
+// }
+//
+// console. log(wallet.increase(1000, 'Зарплата'));
+// console.log(wallet.getOperationLength());
+// console.log(wallet.decrease(2000, 'Покупка ноутбука'));
+// console.log(wallet.getOperationLength());
+// console.log(wallet.decrease(500, 'Покупка телефон'));
+// console.log(wallet.balance);
+// console.log(wallet.operations);
+
+////////////////// Повторение по объекту ///////////////////////
+const cities = {
+    msk: {
+        let: 200,
+        temp: 25
     },
-    decrease: function (sum, reason) {
-        if (this.balance < sum) {
-            console.log('Недостаточно баланса');
-            return false;
-        }
-        this.balance -= sum;
-        this.operations.push({
-            reason: reason,
-            sum: -sum
-        })
-        return true;
-    },
-    getOperationLength: function () {
-        return this.operations.length;
+    spb: {
+        let: 100,
+        temp: 20
     }
 }
 
-console. log(wallet.increase(1000, 'Зарплата'));
-console.log(wallet.getOperationLength());
-console.log(wallet.decrease(2000, 'Покупка ноутбука'));
-console.log(wallet.getOperationLength());
-console.log(wallet.decrease(500, 'Покупка телефон'));
-console.log(wallet.balance);
-console.log(wallet.operations);
+let sumTemp = 0;
+let citiesCount = Object.keys(cities).length;
+for (const key in cities) {
+    sumTemp += cities[key].temp;
+}
+console.log(sumTemp / citiesCount);
+
+for (const key of Object.keys(cities)) {
+    sumTemp += cities[key].temp;
+}
+console.log(sumTemp / citiesCount);
