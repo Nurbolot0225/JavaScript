@@ -868,12 +868,49 @@
 // })
 // console.log(userData);
 
-const user = {
-    name: 'Нурболот',
-    surname: 'Бердибеков',
-    age: 20,
-    getFullName: function() {
-        return this.name + ' ' + this.surname;
+//////////////  Методы объектов //////////////////
+// const user = {
+//     name: 'Нурболот',
+//     surname: 'Бердибеков',
+//     age: 20,
+//     getFullName: function() {
+//         return this.name + ' ' + this.surname;
+//     }
+// }
+// console.log(user.getFullName());
+
+const wallet = {
+    balance: 0,
+    operations: [],
+    increase: function (sum, reason) {
+        this.balance += sum;
+        this.operations.push({
+            reason: reason,
+            sum: sum
+        })
+        return true;
+    },
+    decrease: function (sum, reason) {
+        if (this.balance < sum) {
+            console.log('Недостаточно баланса');
+            return false;
+        }
+        this.balance -= sum;
+        this.operations.push({
+            reason: reason,
+            sum: -sum
+        })
+        return true;
+    },
+    getOperationLength: function () {
+        return this.operations.length;
     }
 }
-console.log(user.getFullName());
+
+console. log(wallet.increase(1000, 'Зарплата'));
+console.log(wallet.getOperationLength());
+console.log(wallet.decrease(2000, 'Покупка ноутбука'));
+console.log(wallet.getOperationLength());
+console.log(wallet.decrease(500, 'Покупка телефон'));
+console.log(wallet.balance);
+console.log(wallet.operations);
