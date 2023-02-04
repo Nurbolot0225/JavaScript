@@ -939,22 +939,39 @@
 // }
 // console.log(sumTemp / citiesCount);
 
-let user =  {
-    name: 'Вася',
-    age: 40,
-    city: 'Moscow'
-};
-const { age, ...usersWithAge } = user;
-console.log(age);
-console.log(usersWithAge);
+// let user =  {
+//     name: 'Вася',
+//     age: 40,
+//     city: 'Moscow'
+// };
+// const { age, ...usersWithAge } = user;
+// console.log(age);
+// console.log(usersWithAge);
+//
+// const additionalData = {
+//     skills: ['Разработка', 'Дизайн'],
+//     creditCard: '2342-2345-2734-5422'
+// };
+//
+// user = {
+//     ...user,
+//     ...additionalData
+// }
+// console.log(user);
 
-const additionalData = {
-    skills: ['Разработка', 'Дизайн'],
-    creditCard: '2342-2345-2734-5422'
-};
+const cities = {
+    msk: {
+        temp: {
+            celsius: 25
+        }
+    },
+    spb: {
 
-user = {
-    ...user,
-    ...additionalData
+    }
 }
-console.log(user);
+const city = 'msk'
+if (cities[city] !== undefined && cities[city].temp !== undefined) {
+    console.log(cities[city].temp.celsius);
+}
+
+console.log(cities[city]?.temp?.celsius);
