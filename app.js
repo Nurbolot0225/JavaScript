@@ -916,25 +916,45 @@
 // console.log(wallet.operations);
 
 ////////////////// Повторение по объекту ///////////////////////
-const cities = {
-    msk: {
-        let: 200,
-        temp: 25
-    },
-    spb: {
-        let: 100,
-        temp: 20
-    }
-}
+// const cities = {
+//     msk: {
+//         let: 200,
+//         temp: 25
+//     },
+//     spb: {
+//         let: 100,
+//         temp: 20
+//     }
+// }
 
-let sumTemp = 0;
-let citiesCount = Object.keys(cities).length;
-for (const key in cities) {
-    sumTemp += cities[key].temp;
-}
-console.log(sumTemp / citiesCount);
+// let sumTemp = 0;
+// let citiesCount = Object.keys(cities).length;
+// for (const key in cities) {
+//     sumTemp += cities[key].temp;
+// }
+// console.log(sumTemp / citiesCount);
 
-for (const key of Object.keys(cities)) {
-    sumTemp += cities[key].temp;
+// for (const key of Object.keys(cities)) {
+//     sumTemp += cities[key].temp;
+// }
+// console.log(sumTemp / citiesCount);
+
+let user =  {
+    name: 'Вася',
+    age: 40,
+    city: 'Moscow'
+};
+const { age, ...usersWithAge } = user;
+console.log(age);
+console.log(usersWithAge);
+
+const additionalData = {
+    skills: ['Разработка', 'Дизайн'],
+    creditCard: '2342-2345-2734-5422'
+};
+
+user = {
+    ...user,
+    ...additionalData
 }
-console.log(sumTemp / citiesCount);
+console.log(user);
