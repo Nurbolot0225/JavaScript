@@ -1136,27 +1136,39 @@
 // console.log(sumNumArr(41, 1));
 
 ///////////// Упражнение - объект в объекте ////////////////////
-const company = {
-    name: 'STORES',
-    employees: [
-        {
-            name: 'Nurbolat',
-            getName: function() {
-                return this.name;
-            },
-        }
-    ],
-    ceo: {
-        name: 'Nursultan',
-        getName: function() {
-            return this.name;
-        },
-    },
-    getName: function() {
-        return this.name;
-    },
-}
+// const company = {
+//     name: 'STORES',
+//     employees: [
+//         {
+//             name: 'Nurbolat',
+//             getName: function() {
+//                 return this.name;
+//             },
+//         }
+//     ],
+//     ceo: {
+//         name: 'Nursultan',
+//         getName: function() {
+//             return this.name;
+//         },
+//     },
+//     getName: function() {
+//         return this.name;
+//     },
+// }
+//
+// console.log(company.getName());
+// console.log(company.ceo.getName());
+// console.log(company.employees.map(employee => employee.getName()));
 
-console.log(company.getName());
-console.log(company.ceo.getName());
-console.log(company.employees.map(employee => employee.getName()));
+const b = 1;
+const a = {
+    b,
+    getB: function() {
+        return this.b
+    },
+    getBAlt() {
+        return this.b
+    }
+}
+console.log(a);
