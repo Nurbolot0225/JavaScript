@@ -1033,27 +1033,64 @@
 // console.log(w);
 
 ////////////// Пример scope chain //////////////////
-const successMessage = 'Успех'
+// const successMessage = 'Успех'
+// const user = {
+//     name: 'Nur',
+//     roles: []
+// }
+//
+// function addRole(user, role) {
+//     if (role === 'admin') {
+//         const message = 'Ошибка';
+//         console.log(message);
+//         return user;
+//     }
+//     user.roles.push(role);
+//     let successMessage = 'Ура!!!'
+//     console.log(successMessage);
+//
+//     function logRoles() {
+//         console.log(user.roles);
+//     }
+//     logRoles();
+//     return user;
+// }
+// console.log(addRole(user, 'dev'));
+// console.log(successMessage);
+
+///////////////////// Пример использования this  ////////////////////////
+'use strict';
+
+// console.log(this);
+//
+// function addNum(num1, num2) {
+//     console.log(this);
+//     return num1 + num2;
+// }
+// addNum();
+// const addNum2 = (num1, num2) => {
+//     console.log(this);
+//     return num1 + num2;
+// }
+// addNum2();
+
 const user = {
-    name: 'Nur',
-    roles: []
-}
-
-function addRole(user, role) {
-    if (role === 'admin') {
-        const message = 'Ошибка';
-        console.log(message);
-        return user;
+    name: 'Nurbolot',
+    surname: 'Berdibekov',
+    getFullName: function () {
+        console.log(this);
+        return this.name + ' ' + this.surname;
     }
-    user.roles.push(role);
-    let successMessage = 'Ура!!!'
-    console.log(successMessage);
+};
+user.getFullName();
 
-    function logRoles() {
-        console.log(user.roles)
-    }
-    logRoles();
-    return user;
-}
-console.log(addRole(user, 'dev'));
-console.log(successMessage)
+const user2 = {
+    name: 'Nursultan',
+    surname: 'Abykeev'
+};
+
+user2.getFullName = user.getFullName;
+user.getFullName();
+
+const getFullName = user2.getFullName();
+getFullName();
