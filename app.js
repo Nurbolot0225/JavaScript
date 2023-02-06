@@ -980,54 +980,80 @@
     Сделать объект склад с методами добавления на склад,
     поиска по складу товара и расчёт веса
 */
-const warehouse = {
-    goods: [],
-    findGoodById: function (id) {
-        return this.goods.find(g => g.id === id);
-    },
-    addGood: function (good) {
-        const existedGood = this.findGoodById(good.id);
-        if (existedGood) {
-            console.log('Этот товар уже есть на складе');
-            return;
-        }
-        this.goods.push(good);
-    },
-    getWeightKg: function () {
-        return this.goods.reduce((acc, el) =>
-            acc += el.weight?.kg ? el.weight.kg : 0,
-            0
-        )
-    }
-};
+// const warehouse = {
+//     goods: [],
+//     findGoodById: function (id) {
+//         return this.goods.find(g => g.id === id);
+//     },
+//     addGood: function (good) {
+//         const existedGood = this.findGoodById(good.id);
+//         if (existedGood) {
+//             console.log('Этот товар уже есть на складе');
+//             return;
+//         }
+//         this.goods.push(good);
+//     },
+//     getWeightKg: function () {
+//         return this.goods.reduce((acc, el) =>
+//             acc += el.weight?.kg ? el.weight.kg : 0,
+//             0
+//         )
+//     }
+// };
 
 /* товары */
-const car = {
-    id: 1,
-    weight: {
-        kg: 1000
-    },
-    brand: 'Ford'
-};
-const chair = {
-    id: 1,
-    weight: {
-        kg: 2
-    },
-};
-const paper = {
-    id: 3,
-    color: 'red'
-};
+// const car = {
+//     id: 1,
+//     weight: {
+//         kg: 1000
+//     },
+//     brand: 'Ford'
+// };
+// const chair = {
+//     id: 1,
+//     weight: {
+//         kg: 2
+//     },
+// };
+// const paper = {
+//     id: 3,
+//     color: 'red'
+// };
+//
+// warehouse.addGood(car);
+// warehouse.addGood(car);
+// warehouse.addGood(chair);
+// warehouse.addGood(paper);
+// console.log(warehouse.goods);
+// let findedItem = warehouse.findGoodById(6);
+// console.log(findedItem);
+// findedItem = warehouse.findGoodById(1);
+// console.log(findedItem);
+// const w = warehouse.getWeightKg();
+// console.log(w);
 
-warehouse.addGood(car);
-warehouse.addGood(car);
-warehouse.addGood(chair);
-warehouse.addGood(paper);
-console.log(warehouse.goods);
-let findedItem = warehouse.findGoodById(6);
-console.log(findedItem);
-findedItem = warehouse.findGoodById(1);
-console.log(findedItem);
-const w = warehouse.getWeightKg();
-console.log(w);
+////////////// Пример scope chain //////////////////
+const successMessage = 'Успех'
+const user = {
+    name: 'Nur',
+    roles: []
+}
+
+function addRole(user, role) {
+    if (role === 'admin') {
+        const message = 'Ошибка';
+        console.log(message);
+        return user;
+    }
+    user.roles.push(role);
+    let successMessage = 'Ура!!!'
+    console.log(successMessage);
+
+    function logRoles() {
+        console.log(user.roles)
+    }
+    logRoles();
+    return user;
+}
+console.log(addRole(user, 'dev'));
+console.log(successMessage)
