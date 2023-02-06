@@ -1074,23 +1074,48 @@
 // }
 // addNum2();
 
+// const user = {
+//     name: 'Nurbolot',
+//     surname: 'Berdibekov',
+//     getFullName: function () {
+//         console.log(this);
+//         return this.name + ' ' + this.surname;
+//     }
+// };
+// user.getFullName();
+//
+// const user2 = {
+//     name: 'Nursultan',
+//     surname: 'Abykeev'
+// };
+//
+// user2.getFullName = user.getFullName;
+// user.getFullName();
+//
+// const getFullName = user2.getFullName();
+// getFullName();
+
+/////////////// Контекст в методах ////////////////////////
+
 const user = {
-    name: 'Nurbolot',
-    surname: 'Berdibekov',
-    getFullName: function () {
-        console.log(this);
-        return this.name + ' ' + this.surname;
+    firstName: 'Nurbolot',
+    LastName: 'Berdibekov',
+    age: 20,
+    getUserInfo: function() {
+        console.log(`${this.firstName} ${this.LastName}`);
+
+        const canDrink = () => {
+            if (this.age >= 18) {
+                console.log('Может уже пить!');
+            } else {
+                console.log('Не может пить!')
+            }
+        }
+        canDrink();
+    },
+    getUserArrow: () => {
+        console.log(`${this.firstName} ${this.LastName}`);
     }
-};
-user.getFullName();
+}
 
-const user2 = {
-    name: 'Nursultan',
-    surname: 'Abykeev'
-};
-
-user2.getFullName = user.getFullName;
-user.getFullName();
-
-const getFullName = user2.getFullName();
-getFullName();
+user.getUserInfo();
