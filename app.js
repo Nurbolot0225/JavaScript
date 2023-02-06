@@ -1097,25 +1097,41 @@
 
 /////////////// Контекст в методах ////////////////////////
 
-const user = {
-    firstName: 'Nurbolot',
-    LastName: 'Berdibekov',
-    age: 20,
-    getUserInfo: function() {
-        console.log(`${this.firstName} ${this.LastName}`);
+// const user = {
+//     firstName: 'Nurbolot',
+//     LastName: 'Berdibekov',
+//     age: 20,
+//     getUserInfo: function() {
+//         console.log(`${this.firstName} ${this.LastName}`);
+//
+//         const canDrink = () => {
+//             if (this.age >= 18) {
+//                 console.log('Может уже пить!');
+//             } else {
+//                 console.log('Не может пить!')
+//             }
+//         }
+//         canDrink();
+//     },
+//     getUserArrow: () => {
+//         console.log(`${this.firstName} ${this.LastName}`);
+//     }
+// }
+//
+// user.getUserInfo();
 
-        const canDrink = () => {
-            if (this.age >= 18) {
-                console.log('Может уже пить!');
-            } else {
-                console.log('Не может пить!')
-            }
-        }
-        canDrink();
-    },
-    getUserArrow: () => {
-        console.log(`${this.firstName} ${this.LastName}`);
-    }
-}
+///////////////// Arguments ////////////////////////
+// function sumNum(num1, num2) {
+//     console.log(this);
+//     console.log(arguments);
+//     return num1 + num2;
+// }
+//
+// const sumNumArr = (num1, num2) => {
+//     console.log(this);
+//     console.log(arguments);
+//     return num1 + num2;
+// }
+// console.log(sumNum(41, 1));
+// console.log(sumNumArr(41, 1));
 
-user.getUserInfo();
