@@ -1161,14 +1161,48 @@
 // console.log(company.ceo.getName());
 // console.log(company.employees.map(employee => employee.getName()));
 
-const b = 1;
-const a = {
-    b,
-    getB: function() {
-        return this.b
-    },
-    getBAlt() {
-        return this.b
+///////////////// EOL для методов ////////////////////////
+// const b = 1;
+// const a = {
+//     b,
+//     getB: function() {
+//         return this.b
+//     },
+//     getBAlt() {
+//         return this.b
+//     }
+// }
+// console.log(a);
+
+const audi = {
+    make: 'Audi',
+    model: 'A3',
+    year: 2021,
+    damages: [],
+    addDamage(part, rate) {
+        console.log(`У авто ${this.make} ${this.model} ${this.year} добавлено: повреждение ${part} со степенью ${rate}`)
+        this.damages.push({
+            part,
+            rate
+        });
     }
 }
-console.log(a);
+audi.addDamage('Капот', 1);
+
+const bmw = {
+    name: 'BMW',
+    model: 'X5',
+    year: 2022,
+    damages: [],
+}
+
+bmw.addDamage = audi.addDamage;
+// bmw.addDamage('Бампер', 2);
+
+const addDamageFunc = audi.addDamage;
+// addDamageFunc('Бампер', 2);
+addDamageFunc.call(bmw, 'Бампер', 2);
+addDamageFunc.call(audi, 'Бампер', 2);
+
+addDamageFunc.apply(bmw, ['Юбка', 2]);
+addDamageFunc.apply(audi, ['Юбка', 2]);
