@@ -1,0 +1,36 @@
+* {
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.panel {
+    background-color: #28262d;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: white;
+}
+
+.input {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #28262d;
+    padding: 15px;
+    color: white;
+}
+
+.button {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: #431a65;
+    color: white;
+    padding: 15px;
+    transition: all .1s;
+}
+
+.button:hover {
+    background-color: #320750;
+}
