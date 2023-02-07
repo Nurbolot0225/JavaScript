@@ -1209,24 +1209,40 @@
 // addDamageFunc.apply(audi, ['Юбка', 2]);
 
 ////////////////////  bind  //////////////////////
-const audi = {
-    make: 'Audi',
-    model: 'A3',
-    damages: []
-};
+// const audi = {
+//     make: 'Audi',
+//     model: 'A3',
+//     damages: []
+// };
+//
+// const carManipulation = {
+//     addDamage(part, rate) {
+//         this.damages.push({ part, rate });
+//         console.log(`Добавить повреждение на ${this.make} ${this.model}`);
+//     }
+// }
+//
+// const addDamageAudi = carManipulation.addDamage.bind(audi);
+// addDamageAudi('Крыло', 3);
+//
+// const addDamageAudiRoof = carManipulation.addDamage.bind(audi, 'Крыша');
+// addDamageAudiRoof(5);
+// addDamageAudiRoof(4);
+// console.log(audi);
 
-const carManipulation = {
-    addDamage(part, rate) {
-        this.damages.push({ part, rate });
-        console.log(`Добавить повреждение на ${this.make} ${this.model}`);
+function removePassword(reset) {
+    if (reset) {
+        this.password = undefined;
+    } else {
+        this.password = '1';
     }
 }
 
-const addDamageAudi = carManipulation.addDamage.bind(audi);
-addDamageAudi('Крыло', 3);
+const user = {
+    login: 'nur@a.ru',
+    password: '12345'
+};
 
-const addDamageAudiRoof = carManipulation.addDamage.bind(audi, 'Крыша');
-addDamageAudiRoof(5);
-addDamageAudiRoof(4);
-console.log(audi);
-
+const resetUserPassword = removePassword.bind(user, true);
+resetUserPassword();
+console.log(user);
