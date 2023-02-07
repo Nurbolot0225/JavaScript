@@ -1249,11 +1249,34 @@
 // console.log(user);
 
 //////////////// IIFO ///////////////////////
-function init() {
-    console.log('Start')
-}
-init();
+// function init() {
+//     console.log('Start');
+// }
+// init();
+//
+// (function() {
+//     console.log('Start IIFE');
+// })();
 
-(function() {
-    console.log('Start IIFE');
-})();
+/////////////////// Замыкания ///////////////////////
+function changeBalance() {
+    let balance = 0;
+    let key = '123';
+    return function(sum) {
+        balance += sum;
+        key = 'pass'
+        console.log(`Баланс: ${balance} Замыкания: ${sum}`);
+    }
+}
+const change = changeBalance();
+change(100);
+change(-50);
+change(200);
+change(300);
+change(450);
+change(500);
+console.dir(change);
+
+const change2 = changeBalance();
+change2(100);
+change2(200);
