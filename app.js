@@ -1230,19 +1230,30 @@
 // addDamageAudiRoof(4);
 // console.log(audi);
 
-function removePassword(reset) {
-    if (reset) {
-        this.password = undefined;
-    } else {
-        this.password = '1';
-    }
+////////////////////// Упражнение - управление this ///////////////////////
+// function removePassword(reset) {
+//     if (reset) {
+//         this.password = undefined;
+//     } else {
+//         this.password = '1';
+//     }
+// }
+//
+// const user = {
+//     login: 'nur@a.ru',
+//     password: '12345'
+// };
+//
+// const resetUserPassword = removePassword.bind(user, true);
+// resetUserPassword();
+// console.log(user);
+
+//////////////// IIFO ///////////////////////
+function init() {
+    console.log('Start')
 }
+init();
 
-const user = {
-    login: 'nur@a.ru',
-    password: '12345'
-};
-
-const resetUserPassword = removePassword.bind(user, true);
-resetUserPassword();
-console.log(user);
+(function() {
+    console.log('Start IIFE');
+})();
