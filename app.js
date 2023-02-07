@@ -1259,24 +1259,61 @@
 // })();
 
 /////////////////// Замыкания ///////////////////////
-function changeBalance() {
-    let balance = 0;
-    let key = '123';
-    return function(sum) {
-        balance += sum;
-        key = 'pass'
-        console.log(`Баланс: ${balance} Замыкания: ${sum}`);
+// function changeBalance() {
+//     let balance = 0;
+//     let key = '123';
+//     return function(sum) {
+//         balance += sum;
+//         key = 'pass'
+//         console.log(`Баланс: ${balance} Замыкания: ${sum}`);
+//     }
+// }
+// const change = changeBalance();
+// change(100);
+// change(-50);
+// change(200);
+// change(300);
+// change(450);
+// change(500);
+// console.dir(change);
+//
+// const change2 = changeBalance();
+// change2(100);
+// change2(200);
+
+///////////////////////// Упражнение - работа с замыканиями /////////////////////////////
+const userInfo = {
+    balance: 0,
+    operations: 0,
+    increase(sum) {
+        this.balance += sum;
+        this.operations++;
     }
 }
-const change = changeBalance();
-change(100);
-change(-50);
-change(200);
-change(300);
-change(450);
-change(500);
-console.dir(change);
 
-const change2 = changeBalance();
-change2(100);
-change2(200);
+function user() {
+    const userObj = {
+        balance: 0,
+        operations: 0,
+        increase(sum) {
+            this.balance += sum;
+            this.operations++;
+        }
+    };
+    return function() {
+        return userObj
+    }
+}
+
+const user1 = user();
+user1().increase(100);
+user1().increase(100);
+console.log(user1());
+
+const user2 = user();
+user2().increase(100);
+console.log(user2());
+
+const user3 = user();
+user3().increase(100);
+console.log(user3());
