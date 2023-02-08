@@ -1342,7 +1342,12 @@ function submitForm() {
     document.querySelector('.panel').innerText = input;
     document.querySelector('.input').value = '';
     // document.querySelector('.notification').classList.add('notification_active');
-    document.querySelector('.notification').classList.remove('notification_hide');
+    // document.querySelector('.notification').classList.remove('notification_hide');
+    console.log(document.querySelector('.notification').getAttribute('class'));
+    document.querySelector('.notification').setAttribute('class', 'notification');
+    document.querySelector('.notification').setAttribute('key', 1);
+    document.querySelector('.notification').setAttribute('user_id', 1);
+    console.log(Number(document.querySelector('.notification').getAttribute('user_id')));
 }
 
 function inputChanged(e) {
