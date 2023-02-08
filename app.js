@@ -1342,12 +1342,12 @@ function submitForm() {
     document.querySelector('.panel').innerText = input;
     document.querySelector('.input').value = '';
     // document.querySelector('.notification').classList.add('notification_active');
-    // document.querySelector('.notification').classList.remove('notification_hide');
-    console.log(document.querySelector('.notification').getAttribute('class'));
-    document.querySelector('.notification').setAttribute('class', 'notification');
-    document.querySelector('.notification').setAttribute('key', 1);
-    document.querySelector('.notification').setAttribute('user_id', 1);
-    console.log(Number(document.querySelector('.notification').getAttribute('user_id')));
+    document.querySelector('.notification').classList.remove('notification_hide');
+    // console.log(document.querySelector('.notification').getAttribute('class'));
+    // document.querySelector('.notification').setAttribute('class', 'notification');
+    // document.querySelector('.notification').setAttribute('key', 1);
+    // document.querySelector('.notification').setAttribute('user_id', 1);
+    // console.log(Number(document.querySelector('.notification').getAttribute('user_id')));
 }
 
 function inputChanged(e) {
@@ -1359,11 +1359,19 @@ function inputChanged(e) {
 
 // console.log(document.querySelector('.one').innerText);
 // console.log(document.querySelector('.one ~ div').innerText);
-console.log(document.querySelectorAll('.one')[0].innerText);
-console.log(document.querySelectorAll('.one')[1].innerText);
+// console.log(document.querySelectorAll('.one')[0].innerText);
+// console.log(document.querySelectorAll('.one')[1].innerText);
+//
+// // console.log(document.querySelector('#two').innerText);
+// console.log(document.getElementById('two').innerText);
+// console.log(document.getElementsByClassName('one'))
+// console.log(document.querySelector('[user-id="4"]').innerText);
 
-// console.log(document.querySelector('#two').innerText);
-console.log(document.getElementById('two').innerText);
-console.log(document.getElementsByClassName('one'))
-console.log(document.querySelector('[user-id="4"]').innerText);
-
+const panelText = 'Панель';
+const panelClass = 'button';
+const newElement = document.createElement('div');
+newElement.setAttribute('user-id', 1);
+newElement.classList.add('panel');
+// newElement.innerText = 'Кнопка ';
+newElement.innerHTML = `<div class="${panelClass}">${panelText}</div>`;
+document.querySelector('.test').appendChild(newElement);
