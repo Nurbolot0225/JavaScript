@@ -1343,6 +1343,10 @@ function submitForm() {
     document.querySelector('.input').value = '';
     // document.querySelector('.notification').classList.add('notification_active');
     document.querySelector('.notification').classList.remove('notification_hide');
+    const textString = JSON.stringify({
+        text: input
+    });
+    localStorage.setItem('text', textString);
     // console.log(document.querySelector('.notification').getAttribute('class'));
     // document.querySelector('.notification').setAttribute('class', 'notification');
     // document.querySelector('.notification').setAttribute('key', 1);
@@ -1353,7 +1357,6 @@ function submitForm() {
 function inputChanged(e) {
     if (e.code === 'Enter') {
         submitForm();
-        console.log(e);
     }
 }
 
@@ -1384,7 +1387,8 @@ function inputChanged(e) {
 // localStorage.removeItem('token1');
 // localStorage.clear();
 
-const obj = JSON.parse('{"a": 1}');
-console.log(obj);
-const str =  JSON.stringify(obj);
-console.log(str)
+// const obj = JSON.parse('{"a": 1}');
+// console.log(obj);
+// const str =  JSON.stringify(obj);
+// console.log(str);
+
